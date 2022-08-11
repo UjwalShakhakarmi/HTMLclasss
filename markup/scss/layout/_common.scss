@@ -1,0 +1,144 @@
+.container {
+    max-width: 1210px; //width+padding left+right+border left+right
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &.large {
+        max-width: 1310px;
+    }
+}
+
+.style {
+    position: relative;
+    padding-left: 45px;
+    display: inline-block;
+    vertical-align:top;
+
+    &:after {
+        content: "";
+        height: 42px;
+        width: 42px;
+        background: url('../img/icon1.png');
+        position: absolute;
+        top: 9px;
+        left: 0;
+    }
+}
+
+.bg-stretch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position :center;
+    background-size: cover;
+}
+
+.overline-text {
+    text-transform: uppercase;
+    font-size: 34px;
+}
+
+.btn {
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    @include animate(all,0.35s,ease-in);
+
+    &.primary {
+        background-color:#333333;
+        padding: 18px 15px;
+        min-width: 230px;
+        border: 2px solid #fff;
+        /*border-radius: 25%;oval banauxa*/
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 30px;
+    }
+    &.secondary {
+        padding: 18px 15px;
+        background-color: #bf3d42;
+        border: 2px solid #fff;
+        min-width: 230px;
+        border-radius: 25px;
+    
+    &:hover {
+        background-color: $white;
+        color: #bf3d42;
+        border-color: #333;
+    }
+    }
+
+}
+.two-columns, .four-columns {
+    display: flex;
+    flex-wrap: wrap;
+   
+    @include media ('>=tablet'){
+        margin: 0 -30px;
+    }
+
+    .col {
+        @include media ('>=tablet'){
+        flex: 1;
+        padding: 0 30px;
+    }
+    &.large-col {
+        width: 58.33%;
+        flex: auto;
+    }
+    &.small-col {
+        width: 41.66%;
+        flex: auto;
+
+    }
+  }
+}
+.four-columns {
+    margin: 0 -10px ;
+    
+    .col {
+       
+        padding: 0 10px;
+    }
+}
+
+.slick-arrow {
+   font-size: 52px;
+   color: $red;
+   border: none;
+   background: none;
+   line-height: 1;
+   position : absolute;
+   top: 50%;
+   z-index: 9;
+   transform: translateY(-50%);
+
+   &.slick-next{
+    right: 0;
+   }
+   
+   &.slick-prev{
+    left: 0;
+   }
+
+
+   i {
+    @include animate(color , 0.35s, linear)
+   }
+
+   &:hover {
+    i {
+        color: darken($red,20%);
+    }
+   }
+}
+
+

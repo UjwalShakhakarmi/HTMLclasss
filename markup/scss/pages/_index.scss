@@ -1,0 +1,339 @@
+.banner-part {
+    .banner-slider {
+        height: 100vh;
+        // padding: 65px 0;
+        position: relative;
+        display: flex;
+        
+    .slick-track {
+        display: flex !important;
+        height: 100%;
+    }
+    .slick-slide {
+        height: auto;
+        position: relative;
+        @include flex(wrap, center, center)
+    }
+    .bg-stretch {
+
+        &:after {
+            background-color:rgba(191, 61, 66, 1);/*1 vaneyko opacity of the color*/
+            content:"" ;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            mix-blend-mode: darken;
+            pointer-events: none;
+        }
+    }
+  
+}
+ 
+    h1{
+        color: $white;
+    }
+    
+}
+.banner-content {
+    position: relative;
+    z-index: 9;
+    max-width: 976px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+  p {
+        margin : 0 0 25px; 
+    }
+}
+.about-part {
+    padding: 50px 0 ;
+
+    @include media
+
+   .image-wrap {
+    position: relative;
+    /* width: 500px;
+    height: 345px; */
+    padding-top: 61%;
+    border-radius: 24px;
+    overflow: hidden;
+}
+    p {
+    margin : 0;
+}
+    .btn-wrap {
+        margin-top:60px ;
+    }
+    .two-columns {
+        .small-col {
+            order: 0;
+            @include media('>=table') {
+                
+            }
+        }
+    }
+}
+
+.products {
+    text-align: center;
+    
+    h2 {
+    line-height: 1;
+    margin-bottom: 17px;
+}
+
+.btn-wrap {
+    padding: 15px 0;
+}
+.btn {
+        &.primary {
+            border-color: #b03d42;
+            text-transform: capitalize;
+
+        }
+        &.secondary {
+            text-transform: capitalize;
+    }
+}
+}
+
+.product-details {
+    background-color: #010304;
+    border-radius: 23px;
+    overflow: hidden;
+    color: #fff;
+    font: 17px/1.53 'Roboto', sans-serif;
+
+        .h3 {
+            margin-bottom: 20px;
+        }
+        .product-content {
+            padding: 0 20px 30px;
+            font-size: 14px;
+            line-height: 1.57;
+        }
+}
+
+
+.four-columns {
+    padding: 45px;
+}
+.col{
+        .product-image {
+            height: 400px;
+            position: relative;
+            @include flex(wrap, center,center);
+            position: relative;
+        }
+
+        &:nth-child(2){ 
+            .product-image {
+            height: 305px;/*image height anusar*/
+        }
+        }
+
+        .products .col:nth-child(3) {
+            .product-image {
+            height: 250px;
+        }
+        }
+
+        .products .col:last-child {
+            .product-image {
+            height: 182px;
+        }
+    }
+}
+
+
+/* YO chai 01 ko lagi ho */
+.product-code {
+    // width: 62px;
+    // height: 62px;
+    border-radius: 50%;
+    background-color: #191919;
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: 25px;
+    border: 2px solid #b03d42;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center ;
+    justify-content: center; */
+    line-height: 62px;
+     text-align: center;/* Box ko text lai center ma leyeko */
+     margin: -62px auto 0;
+     position: relative;
+    
+}
+
+    p {
+    margin: 0 0 15px;
+}
+.style {
+    &:after {
+        top: -6px;
+    }
+}
+
+.process-part{
+    background-color: $dark-black;
+    text-align: center;
+    color: $white;
+    padding: 100px 0;
+
+    .container {
+      max-width: 1007px;
+    }
+
+    h2 {
+        color :$white;
+    }
+    .heading-wrap {
+        max-width: 940px;
+        margin: 0 auto 85px;
+    }
+    .icon-wrap {
+        border: 1px solid $white;
+        border-radius: 9px;
+        height: 148px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // align-items: center;
+        @include flex(wrap,center,center);
+
+    }
+    .process-text {
+      @include align-vertical(top);
+      font-size: 20px;
+
+    }
+    .four-columns {
+      margin: 0 -32px;
+      .col {
+          padding: 0 33px;
+
+      }
+    }
+    .btn {
+      text-transform: capitalize;
+    }
+
+}
+.subscribe-part{
+    text-align: center;
+    color: $dark-black;
+    padding: 100px 0;
+
+    .container {
+      max-width: 1007px;
+    }
+
+    // h2 {
+    //     color :$white;
+    // }
+    .heading-wrap {
+        max-width: 940px;
+        margin: 0 auto 85px;
+    }
+    .icon-wrap {
+        border: 1px solid $dark-black;
+        border-radius: 9px;
+        height: 148px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // align-items: center;
+        @include flex(wrap,center,center);
+
+    }
+    // .subscribe-text {
+    //   @include align-vertical(top);
+    //   font-size: 20px;
+      
+
+    // }
+    // .four-columns {
+    //   margin: 0 -32px;
+    //   .col {
+    //       padding: 0 33px;
+
+    //   }
+    // }
+    // .btn {
+    //   text-transform: capitalize;
+    // }
+
+}
+
+.feedback-part {
+  text-align: center;
+  padding: 100px ;
+  
+    .feedback-img {
+      @include size(150px);
+      margin: 0 auto;//block label lai center ma leuna
+      border:1px solid $red;
+      border-radius: 50%;
+      overflow: hidden;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: auto;
+    }
+}
+    cite {
+      font-size: 19px;
+      line-height: 1.57;
+      display: block;
+      text-transform: capitalize;
+    }
+    q {
+        quotes: none;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .feedback-slider {
+        padding:0 60px ;
+    }
+    
+}
+.slick-dots {
+    @extend %listreset;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    @include flex(wrap,center,center);
+
+    li {
+        padding: 0 2px 0 3px;
+
+        &.slick-active {
+            button {
+            @include size(26px);
+            background-color: transparent;
+        }
+    }
+
+
+    }
+    button {
+        padding: 0;
+        display: block;
+        @include hide-text;
+        background-color: #f9f9fb;
+        @include size(18px);
+        border-radius: 50%;
+        border: 3px solid #f9f9fb;
+        @include animate(all,0.35s,ease);
+
+        &:hover {
+            @include size(26px);
+            background-color:transparent ;
+        }
+    }
+}
